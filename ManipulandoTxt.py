@@ -29,3 +29,38 @@ Sintaxe: leitura=open('arquivo.txt'.'r')
         leitura.close()
 
 '''
+'''
+#Criar arquivo
+arquivo = open('arqTexto.txt','w')
+arquivo.write('Curso de Python \n')
+arquivo.write('Aula prática de programação.')
+arquivo.close()
+'''
+
+'''
+#Ler arquivo
+leitura = open('arqTexto.txt', 'r')
+print(leitura.read())
+leitura.close()
+'''
+'''
+arquivo = open('arqTexto.txt','a')
+arquivo.write('Curso de Python com lógica de programação. \n')
+
+valores = [100, 200, 300, 400, 500, 690, 800, 1000]
+for valor in valores:
+    arquivo.write(str(valor)+ '...')
+arquivo.close()
+'''
+'''
+ler = open('arqTexto.txt', 'r')
+print(ler.read())
+ler.close()
+'''
+
+with open ('arqTexto.txt', 'r+') as arquivo:
+    for valor in arquivo:
+        print(valor)
+    arquivo.write('1988'+ '\n')
+    print(valor)
+arquivo.close()
